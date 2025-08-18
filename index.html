@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Tokyo Quest — Explore Tokyo Differently</title>
+  <meta name="description" content="Discover hidden spots you won’t find on Google. 30-minute quests, no booking, totally free in beta. GPS-powered, game-inspired, tourist-free routes." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./styles.css" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tokyo Quest — Explore Tokyo Differently" />
+  <meta property="og:description" content="Discover hidden spots you won’t find on Google. 30-minute quests, no booking, totally free in beta." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tokyo-quest.com/en" />
+  <meta property="og:image" content="https://tokyo-quest.com/en/og-image.jpg" />
+<!-- Favicons -->
+  <!-- Use existing PNG only (ico/svg are not present) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./favicon.png" />
+  <link rel="apple-touch-icon" href="./favicon.png" />
+</head>
+<body>
+  <div class="global-noise" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <header class="site-header" role="banner">
+    <a class="brand" href="https://tokyo-quest.com/en" aria-label="Tokyo Quest home">
+      <!-- Logo image intentionally hidden via CSS; show glitch brand text instead -->
+      <img id="brand-logo" src="./assets/logo-placeholder.png" alt="Tokyo Quest Logo" width="140" height="40" />
+      <span class="brand-text brand-text--glitch" data-glitch="TokyoQuest[β]">TokyoQuest[β]</span>
+    </a>
+    <nav class="top-nav" aria-label="Primary">
+      <a class="nav-link" href="#how">How It Works</a>
+      <a class="nav-link" href="#why">Why</a>
+      <a class="nav-link" href="#areas">Areas</a>
+      <a class="nav-link cta" href="https://tokyo-quest.com/en" data-cta="top">Get Started</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <!-- Add hero--top to move text to top variant as requested -->
+  <section class="hero hero--top" aria-label="Hero">
+    <picture>
+      <!-- Local hero image from Downloads path mirrored via relative path note:
+           For security, browsers cannot load from C:\ directly. Please copy
+           C:\Users\yazir\Downloads\hero.jpg to landing2/assets/hero.jpg to display.
+           We set src to that relative path. -->
+      <img class="hero-bg" src="./assets/hero.jpg" alt="" aria-hidden="true" />
+    </picture>
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <h1 class="glitch" data-glitch="Explore Tokyo Differently">Explore Tokyo Differently</h1>
+      <p class="sub">
+        Discover hidden spots you won’t find on Google.
+      </p>
+      <div class="hero-cta">
+        <a class="btn neon" href="https://tokyo-quest.com/en" data-cta="hero">Get Started</a>
+            <p class="cta-note">30-min quests, No booking, No app download</p>
+        <p class="trust">
+          GPS-powered · Game-inspired · Tourist-free routes
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Auto Sliding Spots Strip (below hero) -->
+  <section class="strip section">
+    <div class="strip-viewport" aria-label="Auto sliding spots">
+      <ul class="strip-track">
+        <li class="strip-card">
+          <img src="./assets/slide-spot-01.webp" alt="Slide spot 01" width="800" height="600" />
+        </li>
+        <li class="strip-card">
+          <img src="./assets/slide-spot-02.webp" alt="Slide spot 02" width="800" height="600" />
+        </li>
+        <li class="strip-card">
+          <img src="./assets/slide-spot-03.webp" alt="Slide spot 03" width="800" height="600" />
+        </li>
+        <li class="strip-card">
+          <img src="./assets/slide-spot-04.webp" alt="Slide spot 04" width="800" height="600" />
+        </li>
+        <li class="strip-card">
+          <img src="./assets/slide-spot-05.webp" alt="Slide spot 05" width="800" height="600" />
+        </li>
+        <li class="strip-card">
+          <img src="./assets/slide-spot-06.webp" alt="Slide spot 06" width="800" height="600" />
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how" class="section how">
+    <div class="container">
+      <h2 class="section-title">How It Works</h2>
+      <ol class="steps steps--designed">
+        <li class="step">
+          <h3><span class="step-title">Step 1 — Pick a Station Quest</span></h3>
+          <p>Choose from original routes around Tokyo’s major stations.</p>
+        </li>
+        <li class="step">
+          <h3><span class="step-title">Step 2 — Follow Photo + Direction Hints</span></h3>
+          <p>Use distance and bearing hints to navigate—no spoilers.</p>
+        </li>
+        <li class="step">
+          <h3><span class="step-title">Step 3 — Unlock Hidden Spots</span></h3>
+          <p>Find places locals love that never rank on search.</p>
+        </li>
+        <li class="step">
+          <h3><span class="step-title">Step 4 — Enjoy in 30 Minutes</span></h3>
+          <p>Add mini-adventures into your day, anytime.</p>
+        </li>
+      </ol>
+    </div>
+
+ <!-- In-App Screenshots (horizontal scroller) -->
+  <section id="screenshot" class="section screenshot">
+    <div class="container">
+
+      <div class="spots-scroller" role="region" aria-label="In-app screenshots carousel" tabindex="0">
+        <!-- 1) Core Hints -->
+        <figure class="screen-frame">
+          <img class="lazy" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='142' height='215' viewBox='0 0 142 215'><rect width='142' height='215' fill='%23152130'/></svg>" data-src="./assets/screen-01.webp" alt="In-app view with distance and direction hints" width="710" height="1075" />
+          <figcaption>Hints show distance and direction—no spoilers.</figcaption>
+        </figure>
+
+        <!-- 2) Playable Areas on the Map -->
+        <figure class="screen-frame">
+          <img class="lazy" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='142' height='215' viewBox='0 0 142 215'><rect width='142' height='215' fill='%23152130'/></svg>" data-src="./assets/screen-02.webp" alt="Playable areas displayed on the map" width="710" height="1075" />
+          <figcaption>Playable Areas on the Map — See where you can start a quest.</figcaption>
+        </figure>
+
+        <!-- 3) Meaning and History of Each Spot -->
+        <figure class="screen-frame">
+          <img class="lazy" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='142' height='215' viewBox='0 0 142 215'><rect width='142' height='215' fill='%23152130'/></svg>" data-src="./assets/screen-03.webp" alt="Meaning and history for a discovered spot" width="710" height="1075" />
+          <figcaption>Meaning and History — Learn the story behind each spot.</figcaption>
+        </figure>
+      </div>
+
+      <p class="scroll-hint" aria-hidden="true">Swipe to view more</p>
+    </div>
+  </section>
+
+  
+  </section>
+
+  <!-- Why Tokyo Quest -->
+  <section id="why" class="section why">
+    <div class="container cards">
+      <h2 class="section-title">Why Tokyo Quest</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3><span>No Booking Needed</span></h3>
+          <p>Jump in anytime. Zero planning required.</p>
+        </article>
+        <article class="card">
+          <h3><span>Local-Only Vibes</span></h3>
+          <p>Go beyond tourist shows to where locals actually hang.</p>
+        </article>
+        <article class="card">
+          <h3><span>Free During Beta</span></h3>
+          <p>Try it now—100% free while we fine-tune.</p>
+        </article>
+        <article class="card">
+          <h3><span>Game Meets Tour</span></h3>
+          <p>Explore the city through challenges and discovery.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Spots — horizontal scroll on mobile -->
+  <section id="featured" class="section areas">
+    <div class="container">
+      <h2 class="section-title">Featured Spots</h2>
+
+      <div class="spots-scroller" role="region" aria-label="Featured spots carousel" tabindex="0">
+        <!-- 1. 渋谷の繁華街にこっそりたたずむ地蔵（道祖神） -->
+        <figure class="spot-card">
+          <img class="lazy" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='3' viewBox='0 0 4 3'><rect width='4' height='3' fill='%23152130'/></svg>" data-src="./assets/spot-guardian.webp" alt="A small guardian statue tucked in a busy district" width="720" height="540" />
+          <figcaption>
+            <h3>Hidden Guardian in the Crowd</h3>
+            <p>A quiet roadside deity quietly watching over a bustling nightlife maze.</p>
+          </figcaption>
+        </figure>
+
+        <!-- 2. 渋谷のレトロなネオンサイン（百軒店） -->
+        <figure class="spot-card">
+          <img class="lazy" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='3' viewBox='0 0 4 3'><rect width='4' height='3' fill='%23152130'/></svg>" data-src="./assets/spot-neon.webp" alt="Retro neon sign glowing in an old alley" width="720" height="540" />
+          <figcaption>
+            <h3>Retro Neon Alley</h3>
+            <p>Old-school tubes buzz in pink and cyan, lighting a pocket of time travel.</p>
+          </figcaption>
+        </figure>
+
+        <!-- 3. 新宿で落語が聞ける寄席（1897年から） -->
+        <figure class="spot-card">
+          <img class="lazy" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='3' viewBox='0 0 4 3'><rect width='4' height='3' fill='%23152130'/></svg>" data-src="./assets/spot-rakugo.webp" alt="Traditional theater for classic storytelling" width="720" height="540" />
+          <figcaption>
+            <h3>Storytelling Stage Since 1897</h3>
+            <p>Slide into creaking seats and hear punchlines honed for a century.</p>
+          </figcaption>
+        </figure>
+
+        <!-- 4. 原宿の静かな神社（19世紀の海軍軍人を祀る） -->
+        <figure class="spot-card">
+          <img class="lazy" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='3' viewBox='0 0 4 3'><rect width='4' height='3' fill='%23152130'/></svg>" data-src="./assets/spot-shrine.webp" alt="Serene shrine hidden beyond fashion streets" width="720" height="540" />
+          <figcaption>
+            <h3>Calm Shrine off the Trend Street</h3>
+            <p>Under tall trees, a maritime legacy rests away from the noise.</p>
+          </figcaption>
+        </figure>
+      </div>
+
+      <p class="scroll-hint" aria-hidden="true">Swipe to explore</p>
+    </div>
+  </section>
+
+  <!-- Beta & Pricing -->
+  <section class="section beta">
+    <div class="container">
+      <h2 class="section-title">Beta & Pricing</h2>
+      <p class="lead">100% Free During Beta</p>
+      <p>All featured spots are free to visit.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq">
+    <div class="container">
+      <h2 class="section-title">FAQ</h2>
+      <details>
+        <summary>Do I need Japanese?</summary>
+        <p>No. The app supports English.</p>
+      </details>
+      <details>
+        <summary>Does it work offline?</summary>
+        <p>You’ll need GPS and basic connectivity.</p>
+      </details>
+      <details>
+        <summary>Is it touristy?</summary>
+        <p>We focus on under-the-radar local spots.</p>
+      </details>
+      <details>
+        <summary>How long is a quest?</summary>
+        <p>About 30 minutes each.</p>
+      </details>
+    </div>
+  </section>
+
+  <section id="areas" class="section routes">
+  <div class="container">
+  <h2 class="section-title">Play Areas</h2>
+  <div class="route-grid">
+    <a class="route-card" href="https://tokyo-quest.com/en/select?location=Shibuya" aria-label="Choose Shibuya quest">
+      <img src="./assets/playareas-shibuya.webp" alt="Shibuya Area" loading="lazy">
+      <div class="route-meta">
+        <h3>Shibuya</h3>
+        <span class="badge badge--style">
+          <span class="style-label">Backstreets</span>
+        </span>
+      </div>
+    </a>
+    <a class="route-card" href="https://tokyo-quest.com/en/select?location=Shinjuku" aria-label="Choose Shinjuku quest">
+      <img src="./assets/playareas-shinjuku.webp" alt="Shinjuku Area" loading="lazy">
+      <div class="route-meta">
+        <h3>Shinjuku</h3>
+        <span class="badge badge--style">
+          <span class="style-label">Hidden Shrines</span>
+        </span>
+      </div>
+    </a>
+    <a class="route-card" href="https://tokyo-quest.com/en/select?location=Harajuku" aria-label="Choose Harajuku quest">
+      <img src="./assets/playareas-harajuku.webp" alt="Harajuku Area" loading="lazy">
+      <div class="route-meta">
+        <h3>Harajuku</h3>
+        <span class="badge badge--style">
+          <span class="style-label">subculture</span>
+        </span>
+      </div>
+    </a>
+  </div>
+</div>
+</section>
+
+  <section class="cta-band">
+    <div class="container band-inner">
+      <p class="band-copy">Ready to start a micro-adventure?</p>
+      <a class="btn neon large" href="https://tokyo-quest.com/en" data-cta="band">Get Started</a>
+      <p class="cta-note">No booking, No app download, No signup</p>
+    </div>
+  </section>
+
+<footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <small>© Tokyo Quest</small>
+      <nav aria-label="Legal">
+        <a class="footer-link" href="https://tokyo-quest.com/en/terms" target="_blank" rel="noreferrer">Terms of Use</a>
+        <a class="footer-link" href="mailto:kanetomo.seihyo@gmail.com">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="./main.js" defer></script>
+
+  <!-- Notes for image replacement (Japanese):
+    - ロゴ: landing2/assets/logo-placeholder.png を後で差し替え可（同名推奨）
+    - ヒーロー: C:\Users\yazir\Downloads\hero.jpg を landing2/assets/hero.jpg にコピーして下さい
+    - エリア: area-*.webp を後で差し替え可
+    - スクショ: app-screenshot.webp を後で差し替え可
+  -->
+</body>
+</html>
